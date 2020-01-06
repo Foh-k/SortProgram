@@ -9,8 +9,8 @@ void quicksort(T)(T ary)
     stack.insertBack(Range(0, ary.length));
     while (!stack.empty)
     {
-        auto r = stack.front();
-        stack.removeFront();
+        auto r = stack.back();
+        stack.removeBack();
         if (abs(r.end - r.begin) <= 1)
             continue;
 
